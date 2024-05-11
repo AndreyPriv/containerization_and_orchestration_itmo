@@ -5,6 +5,9 @@
 
 ### Запуск
 ```commandline
+cd lab1
+```
+```commandline
 cd server
 ```
 ```commandline
