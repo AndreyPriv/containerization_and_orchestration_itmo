@@ -61,6 +61,7 @@ CMD ["uvicorn", "server.src.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
 - **RUN pip install --no-cache-dir --upgrade -r /app/server/requirements.txt** - устанавливает зависимости Python, перечисленные в файле requirements.txt, используя pip. Флаг --no-cache-dir предотвращает использование кэша пакетов, а --upgrade обновляет пакеты до последней версии.
+- **CMD ["uvicorn", "server.src.main:app", "--host", "0.0.0.0", "--port", "8000"]** - запускает сервер uvicorn с приложением, определенным в модуле main из пакета server.src, на хосте "0.0.0.0" и порту "8000".
 
 ### Плохие и хорошие практики
 1. **Использование FROM python:latest в Dockerfile не рекомендуется**:
