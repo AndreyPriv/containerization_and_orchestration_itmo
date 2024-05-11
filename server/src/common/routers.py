@@ -2,7 +2,7 @@ from typing import Annotated
 
 from fastapi import Depends, APIRouter
 
-from src.core.settings import Settings, get_settings
+from ..core.settings import Settings, get_settings
 
 router = APIRouter(tags=["common"], prefix="/common")
 

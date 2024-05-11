@@ -1,8 +1,8 @@
 from sqlalchemy import Boolean, Column, String, Enum as SQLAlchemyEnum
 from sqlalchemy.dialects.postgresql import JSONB
-from src.core.models import Model
+from ..core.models import Model
 
-from src.users.enums import Education, City, Language, Hard, Soft, Country, Industry, Experience
+from ..users.enums import Education, City, Language, Hard, Soft, Country, Industry, Experience
 
 
 class User(Model):

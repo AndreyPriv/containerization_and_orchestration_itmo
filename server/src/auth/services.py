@@ -7,12 +7,12 @@ from jose.exceptions import JWTClaimsError
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.auth.enums import TokenType
-from src.auth.utils import verify_password
-from src.users.enums import Roles
-from src.users.models import User
-from src.core.database import get_db
-from src.core.settings import settings
+from ..auth.enums import TokenType
+from ..auth.utils import verify_password
+from ..users.enums import Roles
+from ..users.models import User
+from ..core.database import get_db
+from ..core.settings import settings
 
 
 async def validate_user(user: User) -> User:

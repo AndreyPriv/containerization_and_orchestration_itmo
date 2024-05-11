@@ -4,8 +4,8 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.auth.auth import Admin, CurrentUser
-from src.users.schemas import (
+from ..auth.auth import Admin, CurrentUser
+from ..users.schemas import (
     UserPage,
     UserPagination,
     UserRequest,
@@ -13,10 +13,10 @@ from src.users.schemas import (
     UserUpdateRequest,
 )
 
-from src.users.services import create_user, delete_user, list_users, update_user
-from src.core.database import get_db
-from src.core.schemas import ExceptionSchema
-from src.users.models import User
+from ..users.services import create_user, delete_user, list_users, update_user
+from ..core.database import get_db
+from ..core.schemas import ExceptionSchema
+from ..users.models import User
 
 router = APIRouter(prefix="/user")
 

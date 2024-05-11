@@ -3,11 +3,11 @@ from typing import Optional, List
 
 from pydantic import BaseModel, EmailStr, model_validator
 
-from src.auth.utils import get_password_hash
-from src.users.enums import Order, Roles, Sort
-from src.core.schemas import PageSchema, PaginationSchema, ResponseSchema
+from ..auth.utils import get_password_hash
+from ..users.enums import Order, Roles, Sort
+from ..core.schemas import PageSchema, PaginationSchema, ResponseSchema
 
-from src.users.models import Education, City, Language, Hard, Soft, Country, Industry, Experience
+from ..users.models import Education, City, Language, Hard, Soft, Country, Industry, Experience
 
 
 class UserRequest(BaseModel):

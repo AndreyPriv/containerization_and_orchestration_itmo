@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-from src.auth import auth_router
-from src.users import users_router
-from src.common import common_router
+from ..auth import auth_router
+from ..users import users_router
+from ..common import common_router
 
 api_router = APIRouter(prefix="/api")
 

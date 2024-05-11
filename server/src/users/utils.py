@@ -2,11 +2,11 @@ from sqlalchemy import exists, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.users.enums import Roles
-from src.users.models import User
-from src.users.schemas import UserCreate
-from src.core.database import SessionLocal
-from src.core.settings import settings
+from ..users.enums import Roles
+from ..users.models import User
+from ..users.schemas import UserCreate
+from ..core.database import SessionLocal
+from ..core.settings import settings
 
 
 async def create_admin(db: AsyncSession = SessionLocal()):
