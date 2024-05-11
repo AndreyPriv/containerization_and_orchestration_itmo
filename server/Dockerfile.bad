@@ -9,3 +9,5 @@ COPY ./alembic.ini /app/alembic.ini
 COPY ./src /app/server/src
 
 RUN pip install --no-cache-dir --upgrade -r /app/server/requirements.txt
+
+VOLUME /app/data
