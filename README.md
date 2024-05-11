@@ -13,7 +13,9 @@ docker build -t test_name .
 ```commandline
 docker run -d --name test_name -p 8000:8000 test_name
 ```
-
+```commandline
+OpenAPI: http://localhost:8000/api/docs
+```
 ### Описание Dockerfile
 
 **Плохой Dockerfile**
