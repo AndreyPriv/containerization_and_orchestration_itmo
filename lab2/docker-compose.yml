@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  init:
+    container_name: init
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    env_file: .env
+    environment:
+      - PYTHONUNBUFFERED=0
+      - PYTHONPATH=/app/server
+      - ENVIRONMENT=production
+    command:
+      - sh
+      - -c
+      - 'alembic upgrade head'
+    depends_on:
+      - db
+
+  server:
+    container_name: server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    env_file: .env
+    environment:
+      - PYTHONUNBUFFERED=0
+      - PYTHONPATH=/app/server
+      - ENVIRONMENT=production
+    restart: always
+    command:
+      - sh
+      - -c
+      - 'uvicorn server.src.main:app --host 0.0.0.0 --port ${SERVER_PORT:-8000}'
+    ports:
+      - '8000:${SERVER_PORT:-8000}'
+    volumes:
+      - ./server:/app/server
+    depends_on:
+      - db
+      - init
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:${SERVER_PORT:-8000}/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - my_network
+
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    env_file: .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
