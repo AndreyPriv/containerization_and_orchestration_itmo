@@ -1,7 +1,8 @@
-# ЛР 1. Dockerfile
+## Лабораторная 1
+
 ### Запуск
 ```commandline
-cd server
+cd lab1\server
 ```
 ```commandline
 docker build -t test_name .
