@@ -50,9 +50,11 @@ kind: Service
 metadata:
   name: fastapi-service
 spec:
+  type: NodePort
   selector:
     app: fastapi
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8000
+      nodePort: 30001
