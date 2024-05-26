@@ -4,7 +4,6 @@
 ```commandline
 cd lab3
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/1.png)
 ___
 **Создание объектов через CLI**
 - Запускаем minikube и создаем yml-файлы (манифесты) конфигмапы, сервиса и деплоймента.
@@ -25,7 +24,7 @@ kubectl create -f nextcloud.yml
 ```commandline
 kubectl get pods
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/docs/1.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/1.png)
 ___
 ```commandline
 kubectl get configmap
@@ -33,19 +32,19 @@ kubectl get deployment
 kubectl get secret
 kubectl get service
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/docs/4.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/4.png)
 ___
 ```commandline
 kubectl describe pod <pod_name>
 ```
 
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/docs/2.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/2.png)
 
 ___
 ```commandline
 kubectl config view
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/docs/3.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/3.png)
 ___
 
 ### Вопросы
