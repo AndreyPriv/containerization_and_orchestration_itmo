@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: postgres-container
-          image: postgres:14
+          image: postgres:alpine
           resources:
             limits:
               cpu: 200m

@@ -5,4 +5,4 @@ metadata:
   labels:
     app: postgres
 data:
-  POSTGRES_DB: "postgres"
+  POSTGRES_DB: "nextcloud"

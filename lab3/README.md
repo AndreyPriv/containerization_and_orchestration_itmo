@@ -12,13 +12,35 @@ minikube start
 **Создание объектов через CLI**
 
 ```commandline
+minikube start
 kubectl create -f pg_configmap.yml
 kubectl create -f postgres-secrets.yml
 kubectl create -f pg_service.yml
 kubectl create -f pg_deployment.yml
+
 kubectl create -f nextcloud_configmap.yml
 kubectl create -f nextcloud.yml
 ```
 ![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/master/docs/2.png)
 
 
+```commandline
+minikube dashboard --url
+```
+
+minikube start
+kubectl create -f pg_configmap.yml
+kubectl create -f pg_secret.yml
+kubectl create -f pg_service.yml
+kubectl create -f pg_deployment.yml
+kubectl create -f nextcloud.yml
+
+
+minikube start
+kubectl create -f mysql_configmap.yml
+kubectl create -f mysql_secrets.yml
+kubectl create -f mysql_service.yml
+kubectl create -f mysql_deployment.yml
+
+kubectl create -f nextcloud_configmap.yml
+kubectl create -f nextcloud.yml

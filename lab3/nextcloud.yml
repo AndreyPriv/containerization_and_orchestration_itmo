@@ -6,7 +6,7 @@ metadata:
     app: nextcloud
 type: Opaque
 stringData:
-  NEXTCLOUD_ADMIN_PASSWORD: "password"
+  NEXTCLOUD_ADMIN_PASSWORD: "nextcloud"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -87,12 +87,16 @@ spec:
             port: 80
           initialDelaySeconds: 60
           periodSeconds: 30
+          failureThreshold: 3
+          successThreshold: 1
         readinessProbe:
           httpGet:
             path: /status.php
             port: 80
-          initialDelaySeconds: 30
-          periodSeconds: 15
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          failureThreshold: 3
+          successThreshold: 1
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
       dnsPolicy: ClusterFirst
