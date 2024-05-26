@@ -68,7 +68,7 @@ ___
 ```commandline
 kubectl get pods
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/1.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab4/docs/1.png)
 ___
 ```commandline
 kubectl get configmap
@@ -76,17 +76,17 @@ kubectl get deployment
 kubectl get secret
 kubectl get service
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/5.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab4/docs/5.png)
 ___
 ```commandline
 kubectl describe pod <pod_name>
 ```
 
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/6.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab4/docs/6.png)
 
 ___
 ```commandline
 kubectl config view
 ```
-![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/7.png)
+![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab4/docs/7.png)
 ___
