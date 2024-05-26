@@ -1,0 +1,78 @@
+.teammates {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+
+	@media (max-width: $mantine-breakpoint-sm) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@media (max-width: $mantine-breakpoint-xs) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}
+
+.card {
+	min-height: 356px;
+
+	background-color: light-dark(
+		var(--mantine-color-gray-0),
+		var(--mantine-color-dark-6)
+	) !important;
+
+	@mixin hover {
+		background-color: light-dark(
+			var(--mantine-color-gray-1),
+			var(--mantine-color-dark-5)
+		) !important;
+	}
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.active {
+	grid-column: 1;
+	grid-column-end: 3;
+	grid-row: 1;
+	grid-row-end: 6;
+	background-color: light-dark(
+		var(--mantine-color-gray-0),
+		var(--mantine-color-dark-6)
+	) !important;
+
+	@media (max-width: $mantine-breakpoint-sm) {
+		grid-column: span 3 / span 3;
+		grid-row: 1;
+	}
+
+	@mixin hover {
+		background-color: light-dark(
+			var(--mantine-color-gray-0),
+			var(--mantine-color-dark-6)
+		) !important;
+	}
+}
+
+.expanded .card:not(.active) {
+	opacity: 0.4;
+	grid-column-start: 3;
+	min-height: 128px;
+
+	background-color: light-dark(
+		var(--mantine-color-gray-0),
+		var(--mantine-color-dark-6)
+	) !important;
+
+	@media (max-width: $mantine-breakpoint-sm) {
+		grid-column: span 3 / span 3;
+	}
+
+	@mixin hover {
+		background-color: light-dark(
+			var(--mantine-color-gray-1),
+			var(--mantine-color-dark-5)
+		) !important;
+	}
+}

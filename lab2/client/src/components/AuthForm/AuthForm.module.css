@@ -1,0 +1,14 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.auth {
+	flex-direction: column;
+	gap: var(--mantine-spacing-lg);
+	width: 100%;
+	max-width: 400px;
+	margin-inline: auto;
+}

@@ -1,0 +1,10 @@
+.label {
+	text-transform: uppercase;
+	font-size: var(--mantine-font-size-s) !important;
+	font-weight: 600 !important;
+
+	@media (max-width: $mantine-breakpoint-xs) {
+		font-size: var(--mantine-font-size-xs) !important;
+		font-weight: 700 !important;
+	}
+}
