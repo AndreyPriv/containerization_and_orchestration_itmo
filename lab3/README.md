@@ -61,6 +61,7 @@ ___
 
 **Что (и почему) произойдет, если отскейлить количество реплик postgres-deployment в 0, затем обратно в 1, после чего попробовать снова зайти на Nextcloud?**
 - При остановке и запуске пода PostgreSQL данные базы данных не сохранились. При попытке зайти на Nextcloud после перезапуска пода PostgreSQL, Nextcloud не сможет подключиться к базе данных, так как данные были утеряны.
+- Чтобы обеспечить сохранность данных между перезапусками подов, необходимо использовать PersistentVolume и PersistentVolumeClaim для хранения данных базы данных вне пода.
 
 - ![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/5.png)
 - ![image](https://github.com/AndreyPriv/containerization_and_orchestration_itmo/blob/main/lab3/docs/6.png)
